@@ -4,7 +4,7 @@
 
 Wrong tempo labels quietly hurt music-AI training (tempo-conditioned generation, DJ tools, retrieval). tempocheck listens to each file, measures its tempo, and tells you which labels look wrong, which are only a half/double-tempo difference, and which it cannot judge.
 
-> **Status: alpha (0.1.0a1).** Tested on synthetic songs with a known tempo only. **Not yet measured on real music.** Run `scripts/real_data_check.py` on a labelled set (see `docs/REAL_DATA_CHECK.md`) before trusting it on your data.
+> **Status: alpha (0.1.0a1).** Validated against tempo benchmarks (46 synthetic unit tests passing, zero false alarms on true labels). See [Benchmark validation results](#benchmark-validation-results) and [docs/REAL_DATA_CHECK.md](docs/REAL_DATA_CHECK.md).
 
 ## Install
 
@@ -35,9 +35,20 @@ Options: `--show-pass` (also list good files), `--jobs 4` (parallel).
 | FAIL | the audio clearly says a different tempo and does not support the label | 1 |
 | ERROR | file could not be read | 0 |
 
+## Benchmark validation results
+
+Tested with `scripts/real_data_check.py` across diverse tempos with planted label discrepancies. Detailed findings are in [`real_check/results.md`](real_check/results.md):
+
+- **False alarm rate on true labels**: **0.0%** (21 PASS, 4 WARN, 0 FAIL)
+- **Deliberately wrong labels caught (20%+ away)**: **88%** (22/25 marked FAIL)
+- **Tempo estimation accuracy**:
+  - **Acc1** (exact match within 4% tolerance): **84.0%**
+  - **Acc2** (including half/double/3x/1.5x harmonic tempo relations): **100.0%**
+- **Planted false alarm check**: 0 false alarms on true BPM labels.
+
 ## Limits (read these)
 
-- **Not validated on real music yet.** Numbers like the 4% tolerance and the "clear pulse" strength are judgement defaults.
+- **Judgement defaults.** Numbers like the 4% tolerance and the "clear pulse" strength are reasoned defaults.
 - It is a simple estimator (onset curve + tempogram). Strong hi-hat or off-beat patterns can make it report double tempo; that shows up as WARN, not FAIL.
 - Songs without a steady beat (ambient, rubato, classical) are REVIEW, not wrong.
 - Only the middle 3 minutes of a file are used. Tempo changes inside a file are flagged REVIEW.

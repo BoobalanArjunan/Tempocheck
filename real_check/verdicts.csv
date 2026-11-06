@@ -1,0 +1,26 @@
+file,label_bpm,measured_bpm,verdict,reason,pulse_strength
+song_15_140bpm.wav,140.0,140.0,PASS,label matches the audio,49.75
+song_1_75bpm.wav,75.0,150.0,WARN,audio is 2x the label (measured 150); both feel natural to some listeners,43.55
+song_24_118bpm.wav,118.0,118.0,PASS,label matches the audio,42.81
+song_19_160bpm.wav,160.0,160.0,PASS,label matches the audio,64.13
+song_7_105bpm.wav,105.0,105.0,PASS,label matches the audio,43.27
+song_6_100bpm.wav,100.0,100.0,PASS,label matches the audio,35.9
+song_8_110bpm.wav,110.0,110.0,PASS,label matches the audio,41.57
+song_11_124bpm.wav,124.0,124.0,PASS,label matches the audio,47.8
+song_23_108bpm.wav,108.0,108.0,PASS,label matches the audio,49.57
+song_21_82bpm.wav,82.0,164.0,WARN,audio is 2x the label (measured 164); both feel natural to some listeners,43.21
+song_5_95bpm.wav,95.0,95.0,PASS,label matches the audio,37.27
+song_3_85bpm.wav,85.0,170.0,WARN,audio is 2x the label (measured 170); both feel natural to some listeners,45.16
+song_22_92bpm.wav,92.0,92.0,PASS,label matches the audio,43.85
+song_4_90bpm.wav,90.0,90.0,PASS,label matches the audio,42.84
+song_18_155bpm.wav,155.0,155.0,PASS,label matches the audio,53.48
+song_12_128bpm.wav,128.0,128.0,PASS,label matches the audio,50.3
+song_20_165bpm.wav,165.0,165.0,PASS,label matches the audio,53.04
+song_10_120bpm.wav,120.0,120.0,PASS,label matches the audio,45.29
+song_25_126bpm.wav,126.0,126.0,PASS,label matches the audio,42.37
+song_16_145bpm.wav,145.0,145.0,PASS,label matches the audio,59.8
+song_17_150bpm.wav,150.0,150.0,PASS,label matches the audio,65.17
+song_9_115bpm.wav,115.0,115.0,PASS,label matches the audio,49.5
+song_2_80bpm.wav,80.0,160.0,WARN,audio is 2x the label (measured 160); both feel natural to some listeners,48.79
+song_14_135bpm.wav,135.0,135.0,PASS,label matches the audio,59.04
+song_13_130bpm.wav,130.0,130.0,PASS,label matches the audio,49.59

@@ -3,5 +3,9 @@ __pycache__/
 .pytest_cache/
 build/
 dist/
-real_check/
 .venv/
+*.wav
+*.flac
+*.mp3
+benchmark_audio/
+.DS_Store
