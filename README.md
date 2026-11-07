@@ -4,7 +4,7 @@
 
 Wrong tempo labels quietly hurt music-AI training (tempo-conditioned generation, DJ tools, retrieval). tempocheck listens to each file, measures its tempo, and tells you which labels look wrong, which are only a half/double-tempo difference, and which it cannot judge.
 
-> **Status: alpha (0.1.0a1).** Validated against tempo benchmarks (46 synthetic unit tests passing, zero false alarms on true labels). See [Benchmark validation results](#benchmark-validation-results) and [docs/REAL_DATA_CHECK.md](docs/REAL_DATA_CHECK.md).
+> **Status: alpha (0.1.0).** Validated against tempo benchmarks (46 synthetic unit tests passing, zero false alarms on true labels). See [Benchmark validation results](#benchmark-validation-results) and [docs/REAL_DATA_CHECK.md](docs/REAL_DATA_CHECK.md).
 
 ---
 
